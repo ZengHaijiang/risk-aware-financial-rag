@@ -1,0 +1,14 @@
+pandas
+numpy
+yfinance
+
+faiss-cpu
+
+langchain
+langgraph
+langchain-community
+langchain-ollama
+langchain-huggingface
+
+sentence-transformers
+torch
