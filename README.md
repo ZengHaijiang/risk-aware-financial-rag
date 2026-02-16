@@ -42,7 +42,6 @@ Structured Output
 ```
 
 
-
 ## ✨ Key Features
 ### 1️⃣ Deterministic Financial Tools
 
@@ -54,7 +53,7 @@ Supports:
 
 Numeric computations are performed directly with pandas — never delegated to the LLM.
 
----
+
 
 ### 2️⃣ RAG with Local LLM
 
@@ -65,7 +64,7 @@ Numeric computations are performed directly with pandas — never delegated to t
 - Local LLM via Ollama (gemma3:4b)
 
 - Fully offline
----
+
 
 ### 3️⃣ Routing-Aware Agent (LangGraph)
 
@@ -75,7 +74,7 @@ The system dynamically routes queries:
 
 - Analytical / summary → RAG retrieval
 
----
+
 
 ### 4️⃣ Hallucination Guard
 
@@ -87,19 +86,20 @@ Heuristic checks for:
 
 - Unsupported claims
 
----
+
 
 ### 5️⃣ Confidence Scoring
 
+
 | Route | Confidence |
-|-------|------------|
+|:------|-----------:|
 |-------|------------|
 | Numeric | 1.0 |
 | RAG (grounded) | 0.9 |
 | RAG (hallucination risk) | 0.4 |
 | "I don't know" | 0.2 |
 
----
+
 
 ### 6️⃣ Evaluation Framework
 
@@ -110,9 +110,11 @@ Measures:
 - Hallucination rate  
 - Confidence calibration  
 
----
+
 
 ## 📁 Project Structure
+
+```text
 
 risk-aware-financial-rag/
 │
@@ -132,7 +134,7 @@ risk-aware-financial-rag/
 ├── requirements.txt
 └── README.md
 
----
+```
 
 ## 🛠 Installation
 ### 1️⃣ Clone repo
