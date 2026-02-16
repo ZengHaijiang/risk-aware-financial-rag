@@ -20,19 +20,26 @@ Includes evaluation framework
 
 Runs fully offline (no OpenAI API required)
 
----
 
 ## 🏗 System Architecture
 
-flowchart LR
-  A[User Query] --> B[Parse & Route<br/>(LangGraph)]
-  B --> C[Numeric Tool RAG Retrieval<br/>(FAISS, deterministic)]
-  C --> D[Hallucination Guard]
-  D --> E[Confidence Scoring]
-  E --> F[Structured Output]
+```md
+```mermaid
+flowchart TB
+  Q[User Query] --> R[Parse & Route (LangGraph)]
+
+  R --> N[Numeric Tool<br/>(deterministic)]
+  R --> G[RAG Retrieval<br/>(FAISS)]
+
+  N --> H[Hallucination Guard]
+  G --> H
+
+  H --> C[Confidence Scoring]
+  C --> O[Structured Output]
 
 
----
+
+
 
 ## ✨ Key Features
 ### 1️⃣ Deterministic Financial Tools
