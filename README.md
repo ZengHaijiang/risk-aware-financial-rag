@@ -23,7 +23,6 @@ Runs fully offline (no OpenAI API required)
 
 ## 🏗 System Architecture
 
-```md
 ```mermaid
 flowchart TB
   Q[User Query] --> R[Parse & Route (LangGraph)]
@@ -37,7 +36,7 @@ flowchart TB
   H --> C[Confidence Scoring]
   C --> O[Structured Output]
 
-
+```
 
 
 
