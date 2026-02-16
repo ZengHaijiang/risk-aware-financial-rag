@@ -249,5 +249,5 @@ gemma3:4b
 MIT License
 
 🎯 Final Note
-
 This project demonstrates how to build a production-style, routing-aware AI system combining symbolic computation and neural retrieval — fully offline.
+
