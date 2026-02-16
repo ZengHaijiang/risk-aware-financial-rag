@@ -1,5 +1,0 @@
-query,expected_type,route,routing_correct,confidence,hallucination_risk,numeric_error,numeric_correct
-What is the total return of AAPL?,numeric,numeric,True,1.0,False,2.9243114893828803e-05,True
-Compute TSLA volatility,numeric,numeric,True,1.0,False,6.604532921783424e-06,True
-Summarize the recent trend of MSFT,rag,rag,True,0.2,False,,
-What happened on 2024-01-05 for AAPL?,rag,rag,True,0.2,False,,
