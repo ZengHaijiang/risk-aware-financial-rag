@@ -29,8 +29,8 @@ User Query
 Parse & Route (LangGraph)
    ↓
 ┌───────────────────────────────────┐
-│  Numeric Tool        RAG Retrieval │
-│  (deterministic)     (FAISS)       │
+│  Numeric Tool        RAG Retrieval│
+│  (deterministic)     (FAISS)      │
 └───────────────────────────────────┘
    ↓
 Hallucination Guard
