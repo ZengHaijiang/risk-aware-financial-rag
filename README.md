@@ -1,8 +1,8 @@
-🧠 Risk-Aware Financial RAG Agent (Fully Offline)
+# 🧠 Risk-Aware Financial RAG Agent (Fully Offline)
 
 A routing-aware financial AI system that combines deterministic quantitative computation with retrieval-augmented generation (RAG), built fully offline using a local LLM.
 
-🚀 Overview
+## 🚀 Overview
 
 This project implements a hybrid financial agent that:
 
@@ -20,7 +20,10 @@ Includes evaluation framework
 
 Runs fully offline (no OpenAI API required)
 
-🏗 System Architecture
+---
+
+## 🏗 System Architecture
+
 User Query
     ↓
 Parse & Route (LangGraph)
@@ -38,67 +41,79 @@ Confidence Scoring
         ↓
 Structured Output
 
-✨ Key Features
-1️⃣ Deterministic Financial Tools
+---
+
+## ✨ Key Features
+### 1️⃣ Deterministic Financial Tools
 
 Supports:
 
-Total return
+- Total return
 
-Annualized volatility
+- Annualized volatility
 
 Numeric computations are performed directly with pandas — never delegated to the LLM.
 
-2️⃣ RAG with Local LLM
+---
 
-FAISS vector store
+### 2️⃣ RAG with Local LLM
 
-HuggingFace embeddings (all-MiniLM-L6-v2)
+- FAISS vector store
 
-Local LLM via Ollama (gemma3:4b)
+- HuggingFace embeddings (all-MiniLM-L6-v2)
 
-Fully offline
+- Local LLM via Ollama (gemma3:4b)
 
-3️⃣ Routing-Aware Agent (LangGraph)
+- Fully offline
+---
+
+### 3️⃣ Routing-Aware Agent (LangGraph)
 
 The system dynamically routes queries:
 
-Numeric intent → deterministic tool
+- Numeric intent → deterministic tool
 
-Analytical / summary → RAG retrieval
+- Analytical / summary → RAG retrieval
 
-4️⃣ Hallucination Guard
+---
+
+### 4️⃣ Hallucination Guard
 
 Heuristic checks for:
 
-Ticker inconsistencies
+- Ticker inconsistencies
 
-Context insufficiency
+- Context insufficiency
 
-Unsupported claims
+- Unsupported claims
 
-5️⃣ Confidence Scoring
+---
 
-Rules-based confidence assignment:
+### 5️⃣ Confidence Scoring
 
-Route	Confidence
-Numeric	1.0
-RAG (grounded)	0.9
-RAG (hallucination risk)	0.4
-"I don't know"	0.2
-6️⃣ Evaluation Framework
+| Route | Confidence |
+|-------|------------|
+|-------|------------|
+| Numeric | 1.0 |
+| RAG (grounded) | 0.9 |
+| RAG (hallucination risk) | 0.4 |
+| "I don't know" | 0.2 |
+
+---
+
+### 6️⃣ Evaluation Framework
 
 Measures:
 
-Routing accuracy
+- Routing accuracy  
+- Numeric correctness  
+- Hallucination rate  
+- Confidence calibration  
 
-Numeric correctness
+---
 
-Hallucination rate
+## 📁 Project Structure
 
-Confidence calibration
-
-📁 Project Structure
 risk-aware-financial-rag/
 │
 ├── data/
@@ -117,19 +132,22 @@ risk-aware-financial-rag/
 ├── requirements.txt
 └── README.md
 
-🛠 Installation
-1️⃣ Clone repo
+---
+
+## 🛠 Installation
+### 1️⃣ Clone repo
+
 git clone https://github.com/your-username/risk-aware-financial-rag.git
 cd risk-aware-financial-rag
 
-2️⃣ Create virtual environment
+### 2️⃣ Create virtual environment
 python -m venv venv
 source venv/bin/activate
 
-3️⃣ Install dependencies
+### 3️⃣ Install dependencies
 pip install -r requirements.txt
 
-4️⃣ Install Ollama (Mac)
+### 4️⃣ Install Ollama (Mac)
 
 Download from:
 
@@ -139,7 +157,7 @@ Then:
 
 ollama pull gemma3:4b
 
-▶️ Run the Project
+### ▶️ Run the Project
 Step 1 – Download Market Data
 python src/ingestion.py
 
@@ -167,7 +185,7 @@ Routing Accuracy: 1.0
 Numeric Accuracy: 1.0
 Hallucination Risk Rate: 0.0
 
-🧠 Design Philosophy
+## 🧠 Design Philosophy
 
 This project intentionally separates:
 
@@ -178,39 +196,8 @@ High confidence	Guarded confidence
 
 This hybrid design improves reliability and reduces hallucination risk.
 
-🔬 Why This Is Not a Toy RAG Demo
 
-Unlike simple RAG examples, this system includes:
-
-Deterministic financial computation
-
-Routing-aware architecture
-
-Local LLM deployment
-
-Guardrails for hallucination
-
-Confidence calibration
-
-Evaluation framework
-
-This mirrors real-world AI system design principles.
-
-📈 Potential Extensions
-
-Cross-encoder reranking
-
-Similarity-based confidence
-
-Structured JSON outputs
-
-Multi-date range analysis
-
-Interactive CLI agent
-
-Logging & monitoring
-
-📚 Learning Outcomes
+## 📚 Learning Outcomes
 
 By completing this project, you will understand:
 
@@ -226,7 +213,7 @@ Offline AI deployment
 
 Evaluation of LLM systems
 
-🧑‍💻 Tech Stack
+## 🧑‍💻 Tech Stack
 
 Python
 
@@ -244,10 +231,10 @@ Ollama
 
 gemma3:4b
 
-📜 License
+## 📜 License
 
 MIT License
 
-🎯 Final Note
+## 🎯 Final Note
 This project demonstrates how to build a production-style, routing-aware AI system combining symbolic computation and neural retrieval — fully offline.
 
