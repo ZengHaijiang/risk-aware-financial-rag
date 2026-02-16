@@ -24,22 +24,13 @@ Runs fully offline (no OpenAI API required)
 
 ## 🏗 System Architecture
 
-User Query
-    ↓
-Parse & Route (LangGraph)
-    ↓
- ┌───────────────┐
- │               │
-Numeric Tool     RAG Retrieval
-(deterministic)      (FAISS)
- │               │
- └───────────────┘
-        ↓
-Hallucination Guard
-        ↓
-Confidence Scoring
-        ↓
-Structured Output
+flowchart LR
+  A[User Query] --> B[Parse & Route<br/>(LangGraph)]
+  B --> C[Numeric Tool RAG Retrieval<br/>(FAISS, deterministic)]
+  C --> D[Hallucination Guard]
+  D --> E[Confidence Scoring]
+  E --> F[Structured Output]
+
 
 ---
 
