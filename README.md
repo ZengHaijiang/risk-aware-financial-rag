@@ -1,3 +1,4 @@
+[README.md](https://github.com/user-attachments/files/25331003/README.md)
 🧠 Risk-Aware Financial RAG Agent (Fully Offline)
 
 A routing-aware financial AI system that combines deterministic quantitative computation with retrieval-augmented generation (RAG), built fully offline using a local LLM.
