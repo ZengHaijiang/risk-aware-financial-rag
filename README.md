@@ -23,18 +23,21 @@ Runs fully offline (no OpenAI API required)
 
 ## 🏗 System Architecture
 
-```mermaid
-flowchart TB
-  Q[User Query] --> R[Parse & Route (LangGraph)]
-
-  R --> N[Numeric Tool<br/>(deterministic)]
-  R --> G[RAG Retrieval<br/>(FAISS)]
-
-  N --> H[Hallucination Guard]
-  G --> H
-
-  H --> C[Confidence Scoring]
-  C --> O[Structured Output]
+```text
+User Query
+   ↓
+Parse & Route (LangGraph)
+   ↓
+┌───────────────────────────────────┐
+│  Numeric Tool        RAG Retrieval │
+│  (deterministic)     (FAISS)       │
+└───────────────────────────────────┘
+   ↓
+Hallucination Guard
+   ↓
+Confidence Scoring
+   ↓
+Structured Output
 
 ```
 
