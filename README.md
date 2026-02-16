@@ -93,7 +93,6 @@ Heuristic checks for:
 
 | Route | Confidence |
 |:------|-----------:|
-|-------|------------|
 | Numeric | 1.0 |
 | RAG (grounded) | 0.9 |
 | RAG (hallucination risk) | 0.4 |
